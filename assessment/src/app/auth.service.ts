@@ -29,7 +29,7 @@ export class AuthService {
   }
 
   getUserData(credientials) {
-    return this.http.post<Authenticate>('http://localhost/Mark_Assesment/server/login.php', credientials, {
+    return this.http.post<Authenticate>('http://localhost/Mark_GIT/server/login.php', credientials, {
       headers : {
           'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
       }

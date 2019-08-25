@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-
+  display = false;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  opensideNav() {
+    this.display = true;
   }
 
 }
