@@ -8,7 +8,20 @@ export class CommonService {
 
   constructor(private http: HttpClient) { }
 
-  insertCategory() {
-
+  getAllCategories() {
+    return this.http.post<any>('http://localhost/Mark_GIT/server/categories.php', {action: 'getall'}, {
+      headers : {
+          'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+      }
+    });
   }
+
+  insertCategory(categoryData) {
+    return this.http.post<any>('http://localhost/Mark_GIT/server/categories.php', categoryData, {
+      headers : {
+          'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+      }
+    });
+  }
+
 }

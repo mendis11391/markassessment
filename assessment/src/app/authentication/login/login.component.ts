@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
   }
 
   validateUser() {
-    if(this.loginForm.valid) {
+    if (this.loginForm.valid) {
       this.auth.getUserData(this.loginForm.value).subscribe((response) => {
         console.log(response);
         this.status = response.success;

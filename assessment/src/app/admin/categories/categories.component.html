@@ -1,7 +1,22 @@
-<form>
-  <div class="form-group">
-    <label for="email">Category Name:</label>
-    <input type="email" class="form-control">
+<form [formGroup]="categoryForm">
+  <div class="form-group loginFields">
+    <span class="ui-float-label">
+      <input type="text" size="30" formControlName="categoryName" pInputText>
+      <label for="float-input">Category Name</label>
+    </span>
   </div>
-  <button type="button" class="btn btn-primary">Submit</button>
+  <button type="button" class="btn btn-primary" (click)="addCategory()">Submit</button>
 </form>
+
+
+<div class="row pt-5">
+  <div class="col-sm-6 col-md-6 col-lg-6" *ngFor="let category of categoriesList">
+      <div class="card">
+          <a href="javascript:(0);" [routerLink]="['../addquestions/', {id: category.categoryID}]">
+            <div class="card-body">
+              {{category.categoryName}}
+            </div>
+          </a>
+        </div>
+  </div>
+</div>
