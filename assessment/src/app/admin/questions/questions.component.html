@@ -1,1 +1,26 @@
-<p>questions works!</p>
+<div class="row">
+  <div class="container">
+    <form [formGroup]="addQuizForm">
+      <div class="form-group">
+        <label for="Question">Question</label>
+        <input type="text" class="form-control" formControlName="question" id="Question">
+      </div>
+      <div class="col-md-12">
+        <button class="btn btn-primary" (click)="addOptions()">Add Option</button>
+      </div>
+      <div class="col-md-12" formArrayName="options" *ngFor="let option of allOptions.controls; let i=index">
+        <span class="row mt-3">
+          <div class="col-md-6">
+              <input type="checkbox" class="form-check-input" [value]="i">
+              <input type="text" class="form-control my-1" [formControlName]="i">
+          </div>
+        <button class="btn btn-danger" (click)="removeOptions(i)">-</button></span>
+      </div>
+      <button type="submit" class="btn btn-success mt-4" (click)="addQuestion()">Add Question</button>
+    </form>
+    <!-- {{addQuizForm.value | json}} -->
+  </div>
+</div>
+
+
+

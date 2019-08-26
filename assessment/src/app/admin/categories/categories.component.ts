@@ -32,14 +32,14 @@ export class CategoriesComponent implements OnInit {
 
   addCategory() {
     const dt = new Date();
-    // tslint:disable-next-line: max-line-length
     const qID =
     dt.getDate() +
     '-' + (dt.getMonth() + 1) +
     '-' + dt.getFullYear() +
     '-' + dt.getHours() +
     '' + dt.getMinutes() +
-    '' + dt.getSeconds();
+    '' + dt.getSeconds() +
+    '' + dt.getMilliseconds();
 
     this.categoryForm.patchValue({
       categoryID: qID

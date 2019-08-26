@@ -1,10 +1,8 @@
-import { Injectable } from '@angular/core';
-
-@Injectable({
-  providedIn: 'root'
-})
-
-export class ConstantURL {
-  baseURL = `http://localhost/Mark_Assesment/server/`;
-  login = `${this.baseURL}login.php`;
-}
+const baseUrl = 'http://localhost/Mark_GIT/server/';
+export const ConstantsURL = {
+    LOGIN: `${baseUrl}login.php`,
+    CATEGORIES: `${baseUrl}categories.php`,
+    DEGREE: `${baseUrl}degrees.php`,
+    ADD_STUDENT: `${baseUrl}student.php`,
+    ADD_QUSTIONAIR: `${baseUrl}addQuestions.php`,
+};

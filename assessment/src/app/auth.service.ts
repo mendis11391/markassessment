@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { ConstantsURL } from './constURL';
 
 interface Authenticate {
   success: boolean;
@@ -29,7 +30,7 @@ export class AuthService {
   }
 
   getUserData(credientials) {
-    return this.http.post<Authenticate>('http://localhost/Mark_GIT/server/login.php', credientials, {
+    return this.http.post<Authenticate>(ConstantsURL.LOGIN, credientials, {
       headers : {
           'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
       }
