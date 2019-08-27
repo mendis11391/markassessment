@@ -1,1 +1,16 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
+
+* {
+  font-family: 'Quicksand', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
+}
+:root {
+  --dark-purple: #3b0b70;
+  --medium-purple: #4d148c;
+  --light-purple: #5956a2;
+
+  --light-orange: #ff8a00;
+
+  --light-grey: #ececec;
+}
+

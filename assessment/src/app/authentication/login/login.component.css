@@ -1,5 +1,88 @@
-
+:host .container-fluid{
+  background: var(--light-grey);
+  height: 100vh;
+}
 
 .loginFields input, .submit-btn{
   width: 100%;
+}
+
+.loginForm .card-header {
+  background: var(--medium-purple);
+  color: var(--light-grey);
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+  letter-spacing: 3px;
+}
+
+.loginForm button {
+  background: var(--light-purple);
+  border: none;
+  box-shadow: none;
+}
+
+.loginForm button {
+  height: 45px;
+}
+
+.loginForm .ui-float-label>label {
+  left: 0.9em;
+}
+
+
+button:focus {
+  box-shadow: none !important;
+  border: none;
+  box-shadow: 1px 2px 10px 5px rgba(0,0,0,0.19) !important;
+}
+
+.loginForm .input-control {
+  position: relative;
+  background-color: #f2f2f2 !important;
+  height: 60px;
+  margin-bottom: 0px;
+  margin-top: 4px !important;
+  border-radius: 0;
+}
+
+.loginForm .inside-input-control {
+  border-left: 3px solid transparent;
+}
+
+.loginForm .custom-input-field {
+  position: absolute;
+  background-color: #f2f2f2;
+  width: 97%;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  top: 21px;
+  padding-left: 30px;
+  height: 33px;
+  font-family: Roboto-Light, sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.6;
+  letter-spacing: -0.4px;
+  text-align: left;
+  color: #646464;
+}
+
+.loginForm .custom-input-label {
+  pointer-events: none;
+  position: absolute;
+  padding: 20px 16px;
+  font-family: Roboto-Bold, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.4px;
+  text-align: left;
+  color: #adadad;
+  transition: all 0.2s ease-in-out;
+  margin: 0px;
 }
