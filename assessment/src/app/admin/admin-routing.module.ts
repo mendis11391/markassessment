@@ -12,7 +12,7 @@ const routes: Routes = [
     children: [
         {path: '', redirectTo: 'categories', pathMatch: 'full'},
         {path: 'categories', component: CategoriesComponent},
-        { path: 'addquestions', component: QuestionsComponent }
+        {path: 'addquestions', component: QuestionsComponent}
     ]
 }
 ];
