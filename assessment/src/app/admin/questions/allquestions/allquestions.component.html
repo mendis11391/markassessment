@@ -1,0 +1,24 @@
+<div class="container">
+  <span *ngFor="let data of quizValues; let i = index">
+    <div class="card mt-4">
+      <div class="card-body">
+        <div class="form-group">
+          <label for="Question">{{i+1}}. {{data.question.question}}</label>
+          <div >
+            <ul class="list-group">
+              <span *ngFor="let item of data.question.options; let j = index">
+              <li class="list-group-item mt-3">
+                <span>{{j}}. {{item}}</span>
+              </li>
+              </span>
+            </ul>
+          </div>
+        </div>
+        <div class="card bg-primary text-white">
+          <h4 class="pl-2">Correct Answers</h4>
+            <div class="p-2" *ngFor="let item1 of data.question.correctAns; let z = index">{{data.question.options[z]}}</div>
+          </div>
+      </div>
+  </div>
+  </span>
+</div>

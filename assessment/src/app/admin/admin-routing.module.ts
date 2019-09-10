@@ -4,6 +4,7 @@ import { CategoriesComponent } from './categories/categories.component';
 import { AdminComponent } from './admin.component';
 import { AuthGuard } from '../auth.guard';
 import { QuestionsComponent } from './questions/questions.component';
+import { AllquestionsComponent } from './questions/allquestions/allquestions.component';
 
 
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
     children: [
         {path: '', redirectTo: 'categories', pathMatch: 'full'},
         {path: 'categories', component: CategoriesComponent},
-        {path: 'addquestions', component: QuestionsComponent}
+        {path: 'addquestions', component: QuestionsComponent},
+        {path: 'allquestions', component: AllquestionsComponent}
     ]
 }
 ];

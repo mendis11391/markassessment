@@ -27,7 +27,7 @@ $res["isString"] = $isString;
 $res["imgPath"] = $imgPath;
 $res["audioPath"] = $audioPath;
 
-$insertQuestionStatement = "INSERT INTO `questions`(`qID`, `question`, `topicID`, `isImg`, `isAudio`, `isString`, `imgPath`, `audioPath`) VALUES ('$qID', '$question', '$topicID', '$isImg', '$isAudio', '$isString', '$imgPath', '$audioPath')";
+$insertQuestionStatement = "INSERT INTO `questions`(`qID`, `question`, `correctOptions`, `topicID`, `isImg`, `isAudio`, `isString`, `imgPath`, `audioPath`) VALUES ('$qID', '$question', '$correctOptions', '$topicID', '$isImg', '$isAudio', '$isString', '$imgPath', '$audioPath')";
 
  if ($mysqli->query($insertQuestionStatement)) {
     $insertoptions = "INSERT INTO `answers`(`questionID`, `answer`) VALUES ('$qID', '$correctOptions')";
