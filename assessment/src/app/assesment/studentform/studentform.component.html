@@ -1,1 +1,70 @@
-<p>studentform works!</p>
+<div class="container pt-5">
+  <form [formGroup]="studentForm">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Name:</label>
+        <input type="text" formControlName="name" class="form-control" autocomplete="off">
+      </div>
+
+      <div class="form-group">
+        <label>Email:</label>
+        <input type="text" formControlName="email" class="form-control" autocomplete="off">
+      </div>
+
+      <div class="form-group">
+        <label>Contact 1:</label>
+        <input type="text" formControlName="contact1" class="form-control" autocomplete="off">
+      </div>
+
+      <div class="form-group">
+        <label>Contact 2:</label>
+        <input type="text" formControlName="contact2" class="form-control" autocomplete="off">
+      </div>
+
+      <div class="form-group">
+        <label>Address:</label>
+        <textarea
+            cols="30"
+            formControlName="address"
+            pinputtextarea
+            rows="5"
+            class="form-control"
+          ></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Qualification:</label>
+        <select class="form-control" id="sel1" formControlName="qualificationID">
+          <option value="" selected disabled>Select</option>
+          <option *ngFor="let item of qualification" [value]="item.value">{{
+            item.label
+          }}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Specilazation (Optional)</label>
+        <input type="text" formControlName="specialzation" class="form-control" autocomplete="off">
+      </div>
+
+      <div class="form-group">
+          <label>Year Of Passing</label>
+          <input type="text" formControlName="yearofpassing" class="form-control" autocomplete="off">
+        </div>
+
+      <div class="form-group">
+        <p-checkbox
+          formControlName="agree"
+          value="termsagreed"
+          label="Agree to our terms and conditions"
+        ></p-checkbox>
+      </div>
+
+      <button type="button" class="btn btn-primary" (click)="submitForm()">Submit</button>
+    </div>
+    <div class="col"></div>
+  </div>
+</form>
+</div>

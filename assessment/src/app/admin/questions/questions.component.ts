@@ -87,7 +87,12 @@ export class QuestionsComponent implements OnInit {
 
       this.aq.addQuestions(data).subscribe(res => {
         console.log(res);
+        // while (this.addQuizForm.value.options.length !== 0) {
+        //   const alloptions = this.addQuizForm.get('options');
+        //   (<FormArray>alloptions).removeAt(0);
+        // }
         this.addQuizForm.reset();
+        location.reload();
       });
     }
   }

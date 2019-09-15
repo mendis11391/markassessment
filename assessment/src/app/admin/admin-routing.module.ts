@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { CategoriesComponent } from './categories/categories.component';
 import { AdminComponent } from './admin.component';
@@ -21,6 +22,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
 })
 export class AdminRoutingModule { }

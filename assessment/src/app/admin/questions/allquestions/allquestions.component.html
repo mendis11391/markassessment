@@ -16,7 +16,7 @@
         </div>
         <div class="card bg-primary text-white">
           <h4 class="pl-2">Correct Answers</h4>
-            <div class="p-2" *ngFor="let item1 of data.question.correctAns; let z = index">{{data.question.options[z]}}</div>
+            <div class="p-2" *ngFor="let item1 of data.question.correctAns; let z = index">{{data.question.options[data.question.correctAns[z]]}}</div>
           </div>
       </div>
   </div>

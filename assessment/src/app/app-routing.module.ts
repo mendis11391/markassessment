@@ -5,6 +5,7 @@ import { AssesmentComponent } from './assesment/assesment.component';
 import { AdminComponent } from './admin/admin.component';
 
 
+
 const routes: Routes = [
   {path: '', redirectTo: 'signin', pathMatch: 'full'},
   {path: 'signin', component: LoginComponent}
@@ -12,6 +13,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [],
 })
 export class AppRoutingModule { }

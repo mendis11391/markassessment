@@ -5,5 +5,5 @@ export const ConstantsURL = {
     DEGREE: `${baseUrl}degrees.php`,
     ADD_STUDENT: `${baseUrl}student.php`,
     ADD_QUSTIONAIR: `${baseUrl}addQuestions.php`,
-    GET_ALL_QUETIONS: `${baseUrl}allQuestions.php`
+    GET_ALL_QUETIONS: `${baseUrl}allQuestions.php`,
 };
